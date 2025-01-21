@@ -115,7 +115,7 @@
                 <li><a href="#contact" title="Informações de contato">Contacto</a></li>
                 <div class="top-images">
                     <img
-                        src="logosapoios.jpg" 
+                        src="C:\Users\EDGARSOARES\OneDrive - IEFP Formação\Ambiente de Trabalho\Site Marcos\logosapoios.jpg" 
                         alt="Logotipos dos apoios" 
                         title="Logotipos dos apoios ao site"
                         class="top-image" 
@@ -145,34 +145,70 @@
             </div>
         <div class="hobbies-images">
             <img 
-                src="jogo.jpg" 
+                src="C:\Users\EDGARSOARES\OneDrive - IEFP Formação\Ambiente de Trabalho\Site Marcos\jogo.jpg" 
                 alt="Uma pessoa concentrada jogando em um computador" 
                 title="Uma pessoa concentrada a jogar no computador"
                 class="hobbies-image" 
                 tabindex="0"
             >
             <img 
-                src="mota.jpg" 
+                src="C:\Users\EDGARSOARES\OneDrive - IEFP Formação\Ambiente de Trabalho\Site Marcos\mota.jpg" 
                 alt="Mota clássica" 
                 title="Imagem de uma mota clássica"
                 class="hobbies-image" 
                 tabindex="0"
             >
             <img 
-                src="tarta.jpg" 
+                src="C:\Users\EDGARSOARES\OneDrive - IEFP Formação\Ambiente de Trabalho\Site Marcos\tarta.jpg" 
                 alt="Tartaruga" 
                 title="Tartaruga tranquila"
                 class="hobbies-image" 
                 tabindex="0"
             >
             <img 
-                src="spotify.png" 
+                src="C:\Users\EDGARSOARES\OneDrive - IEFP Formação\Ambiente de Trabalho\Site Marcos\spotify.png" 
                 alt="Logotipo do Spotify" 
                 title="Logotipo do Spotify"
                 class="hobbies-image" 
                 tabindex="0"
             >
         </div>
+        <div class="hobbies-video" style="margin-top: 20px; text-align: center;">
+            <div class="hobbies-video" style="margin-top: 20px; text-align: center;">
+                <video 
+                    id="videoPlayer" 
+                    width="600" 
+                    style="border: 2px solid #4b0082; border-radius: 10px;" 
+                    aria-label="Vídeo sobre liberdade de andar de mota."
+                    tabindex="0"
+                >
+                    <source src="freedom.mp4" type="video/mp4">
+                    O seu navegador não suporta o elemento <code>video</code>. 
+                    <a href="freedom.mp4">Baixe o vídeo aqui</a>.
+                </video>
+                <div style="margin-top: 10px;">
+                    <button onclick="playVideo()" aria-label="Reproduzir vídeo">▶️ Reproduzir</button>
+                    <button onclick="pauseVideo()" aria-label="Pausar vídeo">⏸️ Pausar</button>
+                    <button onclick="muteVideo()" aria-label="Ativar ou desativar som">🔇 Som</button>
+                </div>
+            </div>
+            
+            <script>
+                const videoPlayer = document.getElementById('videoPlayer');
+            
+                function playVideo() {
+                    videoPlayer.play();
+                }
+            
+                function pauseVideo() {
+                    videoPlayer.pause();
+                }
+            
+                function muteVideo() {
+                    videoPlayer.muted = !videoPlayer.muted;
+                }
+            </script>
+            
     </section>
 
     <section id="contact" tabindex="0">
@@ -186,7 +222,7 @@
         <p>Edgar Acessibilidades</p>
         <div class="footer-images">
             <img 
-                src="iefp.png" 
+                src="C:\Users\EDGARSOARES\OneDrive - IEFP Formação\Ambiente de Trabalho\Site Marcos\iefp.png" 
                 alt="Logotipo do IEFP" 
                 title="Logotipo do IEFP"
                 class="footer-image" 
