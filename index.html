@@ -60,19 +60,20 @@
             padding: 60px 20px;
             margin-top: 80px;
             background-color: #f4e8ff; /* Roxo claro */
-            padding-top: 80px; /* Para evitar conteudo sob o menu fixo */
             color: #2e2e2e; /* Mantendo contraste suficiente com o fundo */
         }
 
         /* Hobbies Secção */
         .hobbies-images {
             display: flex;
+            flex-wrap: wrap; /* Permite quebra de linha em telas menores */
             gap: 20px; /* Espaçamento entre as imagens */
             justify-content: center; /* Centraliza as imagens */
         }
 
         .hobbies-image {
             max-width: 250px; /* Tamanho máximo da imagem */
+            width: 100%; /* Faz com que as imagens sejam responsivas */
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.3s;
@@ -102,6 +103,38 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            .hobbies-images {
+                flex-direction: column; /* Imagens em coluna */
+                align-items: center; /* Centraliza na coluna */
+            }
+
+            .navbar ul {
+                flex-direction: column; /* Links do menu em coluna */
+                align-items: flex-start;
+                padding-left: 15px;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-image {
+                max-width: 100%;
+            }
+
+            section {
+                padding: 40px 10px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -173,29 +206,19 @@
                 tabindex="0"
             >
         </div>
+
+        <!-- Vídeo incluído -->
         <div class="hobbies-video" style="margin-top: 20px; text-align: center;">
-            <div class="hobbies-video" style="margin-top: 20px; text-align: center;">
-                <div class="hobbies-text">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LrEwssZWrF8?si=2yDLqf1kieCWbeDy&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            </div>
-            
-            <script>
-                const videoPlayer = document.getElementById('videoPlayer');
-            
-                function playVideo() {
-                    videoPlayer.play();
-                }
-            
-                function pauseVideo() {
-                    videoPlayer.pause();
-                }
-            
-                function muteVideo() {
-                    videoPlayer.muted = !videoPlayer.muted;
-                }
-            </script>
-            
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/LrEwssZWrF8?start=5" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </section>
 
     <section id="contact" tabindex="0">
