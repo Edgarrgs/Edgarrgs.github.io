@@ -18,13 +18,13 @@
             line-height: 1.6;
             background-color: #f9f9f9;
             color: #2e2e2e;
-            padding-top: 70px; /* Para acomodar o menu fixo no topo */
+            padding-top: 60px; /* Ajuste para acomodar o menu fixo */
         }
 
         /* Menu fixado no topo */
         .navbar {
             background-color: #4b0082;
-            padding: 15px 0;
+            padding: 10px 0; /* Diminuir a altura do menu */
             position: fixed;
             top: 0;
             left: 0;
@@ -37,16 +37,19 @@
             display: flex;
             justify-content: left;
             flex-wrap: wrap;
+            gap: 20px; /* Adicionar mais espaçamento entre os links */
+            margin-left: 20px; /* Pequeno recuo à esquerda para espaço */
         }
 
         .navbar li {
-            margin: 0 15px;
+            margin: 0;
         }
 
         .navbar a {
             color: #ffffff;
             text-decoration: none;
             font-size: 18px;
+            padding: 5px 10px; /* Adicionar algum preenchimento nos links */
         }
 
         .navbar a:hover, .navbar a:focus {
@@ -55,12 +58,17 @@
             outline-offset: 4px;
         }
 
+        .top-image {
+            max-width: 100%; /* Responsivo */
+            height: auto;
+        }
+
         /* Seções principais */
         section {
             padding: 60px 20px;
-            margin-top: 80px;
+            margin-top: 20px;
             background-color: #f4e8ff; /* Roxo claro */
-            color: #2e2e2e; /* Mantendo contraste suficiente com o fundo */
+            color: #2e2e2e; /* Contraste suficiente */
         }
 
         /* Hobbies Secção */
@@ -84,14 +92,18 @@
             outline: 2px solid #ffb347;
         }
 
-        .footer-image {
-            max-width: 20px;
-            height: auto;
+        /* Estilo do vídeo responsivo */
+        .hobbies-video iframe {
+            width: 100%; /* Preenche a largura disponível */
+            max-width: 700px; /* Tamanho máximo do vídeo */
+            height: auto; /* Mantém a proporção */
+            border-radius: 10px; /* Bordas arredondadas */
         }
 
-        .top-image {
-            max-width: 400px;
-            height: auto;
+        .hobbies-video {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         /* Footer */
@@ -103,6 +115,11 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        .footer-image {
+            max-width: 20px; /* Mantém o tamanho fixo */
+            height: auto;
         }
 
         /* Media Queries para responsividade */
@@ -124,10 +141,6 @@
         }
 
         @media (max-width: 480px) {
-            .top-image {
-                max-width: 100%;
-            }
-
             section {
                 padding: 40px 10px;
             }
@@ -207,11 +220,8 @@
             >
         </div>
 
-        <!-- Vídeo incluído -->
-        <div class="hobbies-video" style="margin-top: 20px; text-align: center;">
+        <div class="hobbies-video">
             <iframe 
-                width="560" 
-                height="315" 
                 src="https://www.youtube.com/embed/LrEwssZWrF8?start=5" 
                 title="YouTube video player" 
                 frameborder="0" 
