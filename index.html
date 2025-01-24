@@ -18,13 +18,13 @@
             line-height: 1.6;
             background-color: #f9f9f9;
             color: #2e2e2e;
-            padding-top: 60px; /* Ajuste para acomodar o menu fixo */
+            padding-top: 70px; /* Para acomodar o menu fixo no topo */
         }
 
         /* Menu fixado no topo */
         .navbar {
             background-color: #4b0082;
-            padding: 10px 0; /* Diminuir a altura do menu */
+            padding: 8px 0; /* Reduzir altura do menu */
             position: fixed;
             top: 0;
             left: 0;
@@ -37,8 +37,8 @@
             display: flex;
             justify-content: left;
             flex-wrap: wrap;
-            gap: 20px; /* Adicionar mais espaçamento entre os links */
-            margin-left: 20px; /* Pequeno recuo à esquerda para espaço */
+            gap: 20px; /* Espaçamento entre os links */
+            margin-left: 20px; /* Pequeno espaçamento à esquerda */
         }
 
         .navbar li {
@@ -49,7 +49,7 @@
             color: #ffffff;
             text-decoration: none;
             font-size: 18px;
-            padding: 5px 10px; /* Adicionar algum preenchimento nos links */
+            padding: 5px 10px;
         }
 
         .navbar a:hover, .navbar a:focus {
@@ -68,20 +68,24 @@
             padding: 60px 20px;
             margin-top: 20px;
             background-color: #f4e8ff; /* Roxo claro */
-            color: #2e2e2e; /* Contraste suficiente */
+            color: #2e2e2e;
+        }
+
+        section#home {
+            margin-top: 90px; /* Adiciona mais espaço abaixo do menu */
         }
 
         /* Hobbies Secção */
         .hobbies-images {
             display: flex;
-            flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-            gap: 20px; /* Espaçamento entre as imagens */
-            justify-content: center; /* Centraliza as imagens */
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
         .hobbies-image {
-            max-width: 250px; /* Tamanho máximo da imagem */
-            width: 100%; /* Faz com que as imagens sejam responsivas */
+            max-width: 250px;
+            width: 100%;
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.3s;
@@ -94,10 +98,10 @@
 
         /* Estilo do vídeo responsivo */
         .hobbies-video iframe {
-            width: 100%; /* Preenche a largura disponível */
-            max-width: 700px; /* Tamanho máximo do vídeo */
-            height: auto; /* Mantém a proporção */
-            border-radius: 10px; /* Bordas arredondadas */
+            width: 100%; 
+            max-width: 700px; 
+            height: auto; 
+            border-radius: 10px; 
         }
 
         .hobbies-video {
@@ -118,36 +122,8 @@
         }
 
         .footer-image {
-            max-width: 20px; /* Mantém o tamanho fixo */
+            max-width: 20px; 
             height: auto;
-        }
-
-        /* Media Queries para responsividade */
-        @media (max-width: 768px) {
-            .hobbies-images {
-                flex-direction: column; /* Imagens em coluna */
-                align-items: center; /* Centraliza na coluna */
-            }
-
-            .navbar ul {
-                flex-direction: column; /* Links do menu em coluna */
-                align-items: flex-start;
-                padding-left: 15px;
-            }
-
-            .navbar li {
-                margin: 10px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            section {
-                padding: 40px 10px;
-            }
-
-            footer {
-                font-size: 14px;
-            }
         }
     </style>
 </head>
